@@ -25,24 +25,27 @@ import LogoPAC from "../assets/LogoPAC.jpg";
                     >
                 </div>
             </header>
-            <main
+            <form method="dialog" id="form-login"
                 class="h-4/6 lg:h-3/5 w-full flex flex-col items-center justify-evenly"
             >
                 <span class="text-2xl text-darkGreen">Login</span>
                 <input
                     class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="text"
-                    placeholder="Username"
+                    type="email"
+                    name="usu"
+                    placeholder="Email"
                     required
                 />
                 <input
                     class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
                     type="password"
+                    name="password"
                     placeholder="Password"
                     required
                 />
+                <h1 class="w-full text-center max-h-6 h-6" id="box-response"></h1>
                 <div class="flex flex-col items-center gap-2 w-3/5 lg:w-30">
-                    <button
+                    <button type="submit"
                         class="btn-ingresar flex-row justify-center w-full lg:w-40 text-white text-xl cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
                         >Entrar</button
                     >
@@ -50,7 +53,7 @@ import LogoPAC from "../assets/LogoPAC.jpg";
                         ><span class="text-sm">Registrarse</span></a
                     >
                 </div>
-            </main>
+            </form>
             <footer class="w-full h-14">
                 <a href="#" class="h-full flex items-center justify-center">
                     <span class="text-xs text-gray-400 hover:text-gray-800"
@@ -61,3 +64,5 @@ import LogoPAC from "../assets/LogoPAC.jpg";
         </section>
     </div>
 </div>
+
+<script src="../controllers/validacion_login.js"></script>
