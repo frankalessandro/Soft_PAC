@@ -1,0 +1,31 @@
+---
+import LogoPAC from '../assets/LogoPAC.jpg'
+---
+<div class="w-screen h-screen flex justify-center items-center bg-moreDarkGreen">
+    <div class="w-3/5 h-4/5 flex shadow-2xl rounded-md">
+        <aside class="w-7/12 h-full">
+            <img class="w-full h-full object-cover rounded-l-2xl" src={LogoPAC.src} alt="">
+        </aside>
+        <section class="w-5/12 h-full bg-white rounded-r-2xl">
+            <header class="h-1/5 w-full flex items-end">
+                <div class="w-3/4 h-1/2 bg-darkGreen rounded-e-3xl flex items-center justify-center">
+                    <span class="font-bold text-white text-2xl">Bienvenidos</span>
+                </div>
+            </header>
+            <main class="h-4/6 w-full flex flex-col items-center justify-evenly">
+                <span class="text-2xl text-darkGreen">Login</span>
+                <input class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen" type="text" placeholder="Username">
+                <input class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen" type="text" placeholder="Password">
+                <div class="flex flex-col items-center gap-2">
+                    <button class="btn-ingresar flex-row justify-center w-40 text-white text-xl cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100">Entrar</button>
+                    <a href=""><span class="text-sm">Registrarse</span></a>
+                </div>
+            </main>
+            <footer class="w-full h-14">
+                <a href="#" class="h-full flex items-center justify-center">
+                    <span class="text-xs text-gray-400 hover:text-gray-800">¿Olvidó su contraseña?</span>
+                </a>
+            </footer>
+        </section>
+    </div>
+</div>
