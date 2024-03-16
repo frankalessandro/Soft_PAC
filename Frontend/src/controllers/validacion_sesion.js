@@ -1,0 +1,5 @@
+export const validarSesion = (item, ruta) => {
+    if (!localStorage.getItem(item)) {
+        location.href = ruta
+    }
+}
