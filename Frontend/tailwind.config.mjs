@@ -9,6 +9,7 @@ module.exports = {
 			colors: {
 				'color-base': '#38A901',
 				'color-base-hover':'#4FF00160',
+				'lightGreen': '#E7FFFF',
 				'darkGreen': '#008080',
 				'moreDarkGreen': '#062F2F'
 			  },

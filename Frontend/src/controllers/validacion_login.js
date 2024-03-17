@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // hacer peticion al servicio
+        // hacer peticion al servicio}
         fetch(`${config.host}/webservice_registo.php`, {
             method: 'POST',
             body: datos_formulario
