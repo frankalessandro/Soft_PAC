@@ -2,6 +2,18 @@
 import LogoPAC from "../assets/LogoPAC.jpg";
 ---
 
+<!--
+$nombre=$_POST["nombre"];
+        $docu=$_POST["docu"];
+        $tel=$_POST["tel"];
+        $correo=$_POST["correo"];
+        $empresa=$_POST["empresa"];
+        $contra=$_POST["contra"];
+        $idCentro=$_POST["idCentro"]; ----- 1
+        $idArea=$_POST["idArea"]; -----1
+        $idRol=$_POST["idRol"]; ---- 1
+-->
+
 <div
     class="w-screen h-screen flex justify-center items-center bg-moreDarkGreen"
 >
@@ -64,20 +76,7 @@ import LogoPAC from "../assets/LogoPAC.jpg";
                     placeholder="Empresa"
                     required
                 />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="password"
-                    name="password"
-                    placeholder="Contraseña"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="password"
-                    name="passConfirm"
-                    placeholder="Confirmar Password"
-                    required
-                />
+        
                 <h1 class="w-full text-center max-h-6 h-6" id="box-response"></h1>
                 <div class="flex flex-col items-center gap-2 w-3/5 lg:w-30">
                     <button type="submit"
@@ -89,5 +88,9 @@ import LogoPAC from "../assets/LogoPAC.jpg";
         </section>
     </div>
 </div>
-
+<script
+    src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"
+    integrity="sha256-r9S9KZvN5nEN1voCkVbj4RdMSLwAa4qeujL5ZOWSN4M="
+    crossorigin="anonymous">
+</script>
 <script src="../controllers/validacion_registro.js"></script>
