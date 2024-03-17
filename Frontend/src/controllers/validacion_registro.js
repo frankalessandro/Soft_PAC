@@ -1,4 +1,5 @@
 import config from "../config/config.json"
+var bcrypt = dcodeIO.bcrypt;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form-register').addEventListener("submit", (e) => {
@@ -18,10 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const jsonData = {};
         for (const [clave, valor] of datos_formulario.entries()) {
             console.log(`${clave}:${valor}`)
-            if (clave === 'password') {
-                contrasena = valor
+            if (clave === 'documentoUsuario') {
+
+                contrasena =bcrypt.hash(contrasena, 10 );
             }
         }
+
+        // datos_formulario.append('password', 1)
+
+        // console.console.log(datos_formulario);
 
 
 
