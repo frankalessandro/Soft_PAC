@@ -1,0 +1,93 @@
+---
+import LogoPAC from "../assets/LogoPAC.jpg";
+---
+
+<div
+    class="w-screen h-screen flex justify-center items-center bg-moreDarkGreen"
+>
+    <div class="w-3/5 h-4/5 flex shadow-2xl rounded-md">
+        <aside class="w-7/12 h-full hidden lg:flex">
+            <img
+                class="w-full h-full object-cover rounded-l-2xl"
+                src={LogoPAC.src}
+                alt=""
+            />
+        </aside>
+        <section
+            class="w-full lg:w-5/12 h-full bg-white rounded-2xl lg:rounded-l-lg"
+        >
+            <header class="h-1/6 w-full flex items-end">
+                <div
+                    class="w-3/4 h-1/2 bg-darkGreen rounded-e-3xl flex items-center justify-center"
+                >
+                    <span class="font-bold text-white text-2xl"
+                        >Nuevo Registro</span
+                    >
+                </div>
+            </header>
+            <form method="dialog" id="form-register"
+                class="h-5/6 w-full flex flex-col items-center justify-evenly"
+            >
+                <span class="text-2xl text-darkGreen">Registrate</span>
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="text"
+                    name="nombreUsuario"
+                    placeholder="Nombre"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="text"
+                    name="documentoUsuario"
+                    placeholder="Documento"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="text"
+                    name="telefonoUsuario"
+                    placeholder="Teléfono"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="email"
+                    name="correoUsuario"
+                    placeholder="Correo"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="text"
+                    name="empresaUsuario"
+                    placeholder="Empresa"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    required
+                />
+                <input
+                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
+                    type="password"
+                    name="passConfirm"
+                    placeholder="Confirmar Password"
+                    required
+                />
+                <h1 class="w-full text-center max-h-6 h-6" id="box-response"></h1>
+                <div class="flex flex-col items-center gap-2 w-3/5 lg:w-30">
+                    <button type="submit"
+                        class="btn-ingresar flex-row justify-center w-full lg:w-40 text-white text-xl cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-2xl px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+                        >Registrarse</button
+                    >
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+<script src="../controllers/validacion_registro.js"></script>

@@ -1,20 +1,20 @@
 ---
-import LogoPAC from "../assets/LogoPAC.jpg";
+import makeidea from "../assets/Proyect.svg";
 ---
 
 <div
-    class="w-screen h-screen flex justify-center items-center bg-moreDarkGreen"
+    class="w-screen h-screen flex justify-center items-center bg-gray-100"
 >
-    <div class="w-3/5 h-4/5 flex shadow-2xl rounded-md">
+    <div class="w-11/12 h-4/6 flex shadow-2xl rounded-md md:w-3/6">
         <aside class="w-7/12 h-full hidden lg:flex">
             <img
-                class="w-full h-full object-cover rounded-l-2xl"
-                src={LogoPAC.src}
+                class="object-fill rounded-l-2xl bg-lightGreen"
+                src={makeidea.src}
                 alt=""
             />
         </aside>
         <section
-            class="w-full lg:w-5/12 h-full bg-white rounded-2xl lg:rounded-l-lg"
+            class="w-full lg:w-5/12 h-full bg-white rounded-r-2xl lg:rounded-r-lg md:rounded-md md:w-full"
         >
             <header class="h-1/5 w-full flex items-end">
                 <div
@@ -49,9 +49,9 @@ import LogoPAC from "../assets/LogoPAC.jpg";
                         class="btn-ingresar flex-row justify-center w-full lg:w-40 text-white text-xl cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
                         >Entrar</button
                     >
-                    <a href="" class="text-center"
-                        ><span class="text-sm">Registrarse</span></a
-                    >
+                    <a href="/register" class="text-center"
+                        ><span class="text-sm">Registrarse</span>
+                    </a>
                 </div>
             </form>
             <footer class="w-full h-14">

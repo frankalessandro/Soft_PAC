@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // hacer peticion al servicio
+        // hacer peticion al servicio}
         fetch(`${config.host}/webservice_registo.php`, {
             method: 'POST',
             body: datos_formulario
@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         localStorage.setItem('user', JSON.stringify(respuestaJson.rpta[0]))
                         console.log(localStorage.getItem('user'))
                         console.log(`email en localstorage: ${localStorage.getItem('email')}`)
-                        setMessage(boxResponse, 'text-lime-700', 'ha ingresado exitosamente 🌱')
+                        setMessage(boxResponse, 'text-lime-700', 'Ha ingresado exitosamente 🌱')
                         location.href = '/dashboard'
                     } else {
-                        setMessage(boxResponse, 'text-red-700', 'credenciales incorrectas 🚩')
+                        setMessage(boxResponse, 'text-red-700', 'Credenciales incorrectas 🚩')
                     }
                 } else {
-                    setMessage(boxResponse, 'text-red-700', 'este correo no existe 🚩')
+                    setMessage(boxResponse, 'text-red-700', 'Este correo no existe 🚩')
                 }
             })
             .catch(error => {
