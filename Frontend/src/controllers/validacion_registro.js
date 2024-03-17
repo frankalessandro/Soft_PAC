@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let contrasena
         const formData = new FormData(this);
         const datos_formulario = new FormData(e.target);
-        //caso 2 para login
-        datos_formulario.append('case', 2)
+        //caso 1 para register
+        datos_formulario.append('case', 1)
         // Convertir los datos del formulario a un objeto JSON
         const jsonData = {};
         for (const [clave, valor] of datos_formulario.entries()) {

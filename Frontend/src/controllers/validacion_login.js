@@ -1,11 +1,11 @@
 import config from "../config/config.json"
+var bcrypt = dcodeIO.bcrypt;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form-login').addEventListener("submit", (e) => {
         e.preventDefault();
 
         console.log(config.host)
-
         //obtener datos con target
         let contrasena
         let boxResponse = document.querySelector('#box-response')
@@ -24,28 +24,37 @@ document.addEventListener('DOMContentLoaded', () => {
             method: 'POST',
             body: datos_formulario
         })
-            .then(respuesta => respuesta.json())//promesa, espera respuesta y se convierte ne notacion de objetos
+            .then(respuesta => respuesta.json()) 
             .then(respuestaJson => {
-                // console.log(`contrasena cliente : ${contrasena}`)
                 if (respuestaJson.rpta) {
-                    console.log(respuestaJson.rpta)
-                    if (contrasena === respuestaJson.rpta[0].contrasena && respuestaJson.rpta[0].rp === 'si') {
-                        localStorage.setItem('email', respuestaJson.rpta[0].correo)
-                        localStorage.setItem('user', JSON.stringify(respuestaJson.rpta[0]))
-                        console.log(localStorage.getItem('user'))
-                        console.log(`email en localstorage: ${localStorage.getItem('email')}`)
-                        setMessage(boxResponse, 'text-lime-700', 'Ha ingresado exitosamente 🌱')
-                        location.href = '/dashboard'
-                    } else {
-                        setMessage(boxResponse, 'text-red-700', 'Credenciales incorrectas 🚩')
-                    }
+                    const contrasenaEncriptada = respuestaJson.rpta[0].contrasena;
+
+                    bcrypt.compare(contrasena, contrasenaEncriptada, function (err, res) {
+                        if (err) {
+                            console.log('bandera')
+                            console.error('Error al comparar las contraseñas:', err);
+                            return;
+                        }
+
+                        if (res && respuestaJson.rpta[0].rp === 'si') {
+                            localStorage.setItem('email', respuestaJson.rpta[0].correo);
+                            localStorage.setItem('user', JSON.stringify(respuestaJson.rpta[0]));
+                            console.log(localStorage.getItem('user'));
+                            console.log(`email en localstorage: ${localStorage.getItem('email')}`);
+                            setMessage(boxResponse, 'text-lime-700', 'ha ingresado exitosamente 🌱');
+                            location.href = '/dashboard';
+                        } else {
+                            setMessage(boxResponse, 'text-red-700', 'credenciales incorrectas 🚩');
+                        }
+                    });
                 } else {
-                    setMessage(boxResponse, 'text-red-700', 'Este correo no existe 🚩')
+                    setMessage(boxResponse, 'text-red-700', 'este correo no existe 🚩');
                 }
             })
             .catch(error => {
-                console.log(error)
-            })
+                console.log(error);
+            });
+
     })
 })
 
