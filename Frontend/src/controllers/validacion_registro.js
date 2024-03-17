@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 contrasena = valor
             }
         }
-
+    
     // Configuración de la solicitud
     const requestOptions = {
         method: 'POST',
