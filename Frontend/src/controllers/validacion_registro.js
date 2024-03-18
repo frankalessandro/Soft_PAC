@@ -2,7 +2,6 @@ import config from "../config/config.json"
 
 var bcrypt = dcodeIO.bcrypt;
 
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form-register').addEventListener("submit", (e) => {
         e.preventDefault();
