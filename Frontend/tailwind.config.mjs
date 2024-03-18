@@ -15,7 +15,11 @@ module.exports = {
 			  },
 			  spacing:{
 				'160':'80vh'
+			  },
+			  backgroundImage:{
+				'content': 'url("./src/assets/banner_bg.jpg")',
 			  }
+
 		},
 		
 	},
