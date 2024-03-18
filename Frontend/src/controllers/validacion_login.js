@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(`${clave}:${valor}`)
             if (clave === 'password') {
                 contrasena = valor
-            }
+                }
         }
 
         // hacer peticion al servicio}
