@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         if (res && respuestaJson.rpta[0].rp === 'si') {
                             localStorage.setItem('email', respuestaJson.rpta[0].correo);
+                            respuestaJson.rpta[0].contrasena = ''
                             localStorage.setItem('user', JSON.stringify(respuestaJson.rpta[0]));
                             console.log(localStorage.getItem('user'));
                             console.log(`email en localstorage: ${localStorage.getItem('email')}`);
