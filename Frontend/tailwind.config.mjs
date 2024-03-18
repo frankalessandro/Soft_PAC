@@ -17,6 +17,7 @@ module.exports = {
 				'160': '80vh',
 			  },
 		},
+		
 	},
 	plugins: [
 		require('flowbite/plugin')
