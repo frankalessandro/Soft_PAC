@@ -13,7 +13,11 @@ module.exports = {
 				'darkGreen': '#008080',
 				'moreDarkGreen': '#062F2F'
 			  },
+			  spacing:{
+				'160':'80vh'
+			  }
 		},
+		
 	},
 	plugins: [
 		require('flowbite/plugin')
