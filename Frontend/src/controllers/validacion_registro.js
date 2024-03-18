@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         datos_formulario.append('case', 1);
         datos_formulario.append('idCentro', 1);
         datos_formulario.append('idArea', 1);
-        datos_formulario.append('idRol', 1);
+        datos_formulario.append('idRol', 4);
 
         // Obtener la contraseña del formulario
         const contrasena = datos_formulario.get('documentoUsuario');
