@@ -1,6 +1,17 @@
+let usuario = JSON.parse(localStorage.getItem("user"));
+console.log(usuario);
 
-let usuario = JSON.parse(localStorage.getItem('user'))
-console.log(usuario)
-const name = document.querySelector('#name-user-box').textContent = usuario.nombre
-const email = document.querySelector('#email-user-box').textContent = usuario.correo
+var rol=usuario.idRol == "1"
+? "Super-Admin"
+: usuario.idRol == "2"
+? "Admin-area"
+: "Cliente";
 
+const name = (document.querySelector("#name-user-box").textContent =
+  usuario.nombre+' - '+rol);
+
+
+
+
+const email = (document.querySelector("#email-user-box").textContent =
+  usuario.correo);
