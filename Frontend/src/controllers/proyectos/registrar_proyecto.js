@@ -16,7 +16,13 @@ document
     })
       .then((respuesta) => respuesta.json())
       .then((r) => {
-        console.log(r);
+        if (r.rpta[0].rp === 'ok') {
+          document.querySelector('#box-message-register-proyect').textContent = '✅ proyecto registrado correctamente !'
+          setTimeout(() => {
+          document.querySelector('#box-message-register-proyect').textContent = ''
+          location.href = "/dashboard"
+          }, 3000);
+        }
       })
       .catch((error) => {
         console.log(error);

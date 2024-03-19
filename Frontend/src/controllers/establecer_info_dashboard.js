@@ -1,5 +1,4 @@
 let usuario = JSON.parse(localStorage.getItem("user"));
-console.log(usuario);
 const rol = usuario.idRol;
 
 const name = (document.querySelector("#name-user-box").textContent =
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   opciones.forEach((opcion) => {
     opcion.addEventListener("click", () => {
       const dataVista = opcion.getAttribute("data-vista");
-      console.log(dataVista);
 
       // Ocultar todas las vistas
       const vistas = document.querySelectorAll(".vistas");
@@ -85,7 +83,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
                   <path fill-rule="evenodd" d="M4 4a2 2 0 1 0 0 4h16a2 2 0 1 0 0-4H4Zm0 6h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8Zm10.707 5.707a1 1 0 0 0-1.414-1.414l-.293.293V12a1 1 0 1 0-2 0v2.586l-.293-.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l2-2Z" clip-rule="evenodd"/>
                 </svg>                
                  <span class="flex-1 ms-3 whitespace-nowrap">Mis proyectos</span>
-                 <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
+                 <span id="count-my-proyects-dashboard" class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
               </a>
            </li>`;
 }
