@@ -4,6 +4,10 @@ const HeaderModal = document.querySelector('#HeaderModal')
 const BodyModal = document.querySelector('#BodyModal')
 
 
+
+const btnAceptar = document.getElementById("btnAceptar");
+const btnRechazar = document.getElementById("btnRechazar");
+
 // hacer peticion al servicio
 //https://sweetmym.com/pacservices/webservice_consultas.php?case=2&idRol=1&idArea=1
 fetch(`${config.host}//webservice_consultas.php?case=2&idRol=1&idArea=1`, {
@@ -12,11 +16,12 @@ fetch(`${config.host}//webservice_consultas.php?case=2&idRol=1&idArea=1`, {
 })
     .then(respuesta => respuesta.json())
     .then(respuestaJson => {
-        console.log(respuestaJson);
+        // console.log(respuestaJson);
         if (respuestaJson.rpta) {
             respuestaJson.rpta.forEach(usuario => {
-                console.log(usuario)
-                
+                // console.log(usuario)
+                document.querySelector('#count-all-projects').textContent = respuestaJson.rpta.length;
+
                 filaProyecto.innerHTML += `
                 <td class="px-6 py-4">
                         ${usuario.idProyecto}
@@ -52,53 +57,56 @@ fetch(`${config.host}//webservice_consultas.php?case=2&idRol=1&idArea=1`, {
                         </td>
                     </tr>
                     `
+
             });
             // Limpiar el contenido actual del HeaderModal
             // Limpiar el contenido actual del HeaderModal
             // Limpiar el contenido actual del HeaderModal
             HeaderModal.innerHTML = "";
-            
+
             // Agregar un evento click a todos los botones que activan el modal
-           // Obtener referencia al modal
-const modal = document.getElementById('static-modal');
+            // Obtener referencia al modal
+            const modal = document.getElementById('static-modal');
 
-// Obtener referencias al botón de cierre del modal
-const closeModalButtons = document.querySelectorAll('[data-modal-hide="static-modal"]');
+            // Obtener referencias al botón de cierre del modal
+            const closeModalButtons = document.querySelectorAll('[data-modal-hide="static-modal"]');
 
-// Función para abrir el modal
-function openModal() {
-    modal.classList.remove('hidden');
-}
+            // Función para abrir el modal
+            function openModal() {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
 
-// Función para cerrar el modal
-function closeModal() {
-    modal.classList.add('hidden');
-}
+            // Función para cerrar el modal
+            function closeModal() {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
 
-// Agregar evento click al botón de cierre del modal
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', closeModal);
-});
+            // Agregar evento click al botón de cierre del modal
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+            });
 
-// Agregar evento click a todos los botones que activan el modal
-document.querySelectorAll('[data-modal-toggle="static-modal"]').forEach(button => {
-    button.addEventListener('click', function () {
-        // Obtener el ID del proyecto asociado al botón presionado
-        const idProyecto = this.closest('tr').querySelector('.px-6.py-4:first-child').textContent.trim();
+            // Agregar evento click a todos los botones que activan el modal
+            document.querySelectorAll('[data-modal-toggle="static-modal"]').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Obtener el ID del proyecto asociado al botón presionado
+                    const idProyecto = this.closest('tr').querySelector('.px-6.py-4:first-child').textContent.trim();
 
-        // Buscar el proyecto con el ID correspondiente en respuestaJson.rpta
-        const proyectoDeseado = respuestaJson.rpta.find(usuario => usuario.idProyecto === idProyecto);
-        
-        // Verificar si se encontró el proyecto deseado
-        if (proyectoDeseado) {
-            // Actualizar el contenido del modal con la información del proyecto
-            HeaderModal.innerHTML = `    
+                    // Buscar el proyecto con el ID correspondiente en respuestaJson.rpta
+                    const proyectoDeseado = respuestaJson.rpta.find(usuario => usuario.idProyecto === idProyecto);
+                    // console.log(proyectoDeseado)
+                    // Verificar si se encontró el proyecto deseado
+                    if (proyectoDeseado) {
+                        // Actualizar el contenido del modal con la información del proyecto
+                        HeaderModal.innerHTML = `    
             <span class="text-xl font-semibold text-gray-900 dark:text-white">
                     Nombre: ${proyectoDeseado.nproyecto} 
                 </span>
     
             `;
-            BodyModal.innerHTML = `
+                        BodyModal.innerHTML = `
                 <div class="">
                     <span class="font-semibold">Objetivo:</span>
                     <p class="text-gray-600"> ${proyectoDeseado.objetivo} </p>
@@ -128,23 +136,23 @@ document.querySelectorAll('[data-modal-toggle="static-modal"]').forEach(button =
                     </div>
                 </div>
             `;
-            // Abrir el modal
-            openModal();
-        } else {
-            // Si el proyecto deseado no se encontró, mostrar un mensaje de error
-            HeaderModal.innerHTML = `
+
+                        btnAceptar.dataset.IdProyecto = proyectoDeseado.idProyecto
+                        btnRechazar.dataset.IdProyecto = proyectoDeseado.idProyecto
+                        // Abrir el modal
+                        openModal();
+                    } else {
+                        // Si el proyecto deseado no se encontró, mostrar un mensaje de error
+                        HeaderModal.innerHTML = `
                 <span class="text-xl font-semibold text-red-600 dark:text-red-400">
                     No se encontró el proyecto con el ID especificado.
                 </span>
             `;
-            // Abrir el modal con el mensaje de error
-            openModal();
-        }
-    });
-});
-
-
-
+                        // Abrir el modal con el mensaje de error
+                        openModal();
+                    }
+                });
+            });
 
         }
     })
@@ -154,55 +162,41 @@ document.querySelectorAll('[data-modal-toggle="static-modal"]').forEach(button =
 
 
 
-
-// Obtener referencias a los botones
-const btnAceptar = document.getElementById("btnAceptar");
-const btnRechazar = document.getElementById("btnRechazar");
-
-// Agregar evento click al botón "Aceptar"
 btnAceptar.addEventListener("click", () => {
-    enviarSolicitudPost("aceptar");
+    enviarSolicitudPost("aceptar", 6);
 });
 
-// Agregar evento click al botón "Rechazar"
 btnRechazar.addEventListener("click", () => {
-    enviarSolicitudPost("rechazar");
+    enviarSolicitudPost("rechazar", 2);
 });
 
 // Función para enviar la solicitud POST con confirmación
-function enviarSolicitudPost(decision) {
-    // Preguntar al usuario si está seguro de realizar la acción
+function enviarSolicitudPost(decision, idEstado) {
     if (confirm(`¿Estás seguro de ${decision === "aceptar" ? "aceptar" : "rechazar"} la solicitud?`)) {
+        // Crear un objeto FormData para enviar los datos como formulario
+        var formData = new FormData();
+        formData.append('case', 5); // Agregar el parámetro adicional "case" con el valor 5
+        formData.append('idProyecto', btnAceptar.dataset.IdProyecto);
+        formData.append('idEstado', idEstado);
+
         // Realizar la solicitud POST
         fetch(`${config.host}/webservice_registo.php`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ 
-                case: 5  // Agregar el parámetro adicional "case" con el valor 5
+            body: formData
+        })
+            .then(response => {
+                
+                // Manejar la respuesta de la solicitud POST
+                // console.log("Solicitud POST realizada con éxito.");
+                location.reload()
+                // Aquí puedes realizar cualquier acción adicional después de la solicitud POST
             })
-        })
-        .then(response => {
-            // Manejar la respuesta de la solicitud POST
-            console.log("Solicitud POST realizada con éxito.");
-            // Aquí puedes realizar cualquier acción adicional después de la solicitud POST
-        })
-        .catch(error => {
-            // Manejar cualquier error que ocurra durante la solicitud POST
-            console.error("Error al realizar la solicitud POST:", error);
-        });
+            .catch(error => {
+                // Manejar cualquier error que ocurra durante la solicitud POST
+                console.error("Error al realizar la solicitud POST:", error);
+            });
     } else {
         // Si el usuario cancela la acción, mostrar un mensaje de cancelación
         alert("La acción ha sido cancelada.");
     }
 }
-
-
-
-
-
-
-
-
-

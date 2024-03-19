@@ -2,7 +2,10 @@
 import { Image } from "astro:assets";
 import makeidea from "../assets/Proyect.svg";
 ---
-
+<script>
+    import { validarSesionLogin } from "../controllers/validacion_sesion";
+    validarSesionLogin("user", "/dashboard");
+</script>
 <div class="w-screen h-screen flex justify-center items-center bg-gray-100">
     <div class="w-11/12 h-4/6 flex shadow-2xl rounded-md md:w-3/6">
         <aside class="w-7/12 h-full hidden lg:flex">
