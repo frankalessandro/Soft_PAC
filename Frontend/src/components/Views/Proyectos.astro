@@ -1,3 +1,339 @@
-<div class="w-full h-screen bg-lime-500 vistas hidden proyectos">
-    lista de proyectos
+<script src="../../controllers/Proyecto/tabla_proyecto.js"></script>
+<div class="w-full h-160 vistas hidden proyectos">
+  <div class="w-full h-full flex justify-center items-center flex-col">
+    <span class="text-3xl font-semibold p-5">Lista de Proyectos</span>
+    <div class="w-11/12 overflow-x-auto shadow-md rounded-lg sm:rounded-lg">
+      <table
+        class="w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-green-200 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3"> Postulante </th>
+            <th scope="col" class="px-6 py-3"> Nombre del proyecto </th>
+            <th scope="col" class="px-6 py-3"> Personas de impacto </th>
+            <th scope="col" class="px-6 py-3"> Empresa </th>
+            <th scope="col" class="px-6 py-3"> Estado </th>
+            <th scope="col" class="px-6 py-3"> Detalle </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          >
+            <th
+              scope="row"
+              class="flex items-center justify-center gap-2 text-left px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              <!-- <img
+                class="w-10 h-10 rounded-full"
+                src="/docs/images/people/profile-picture-1.jpg"
+                alt="Jese image"
+              /> -->
+              <div class="ps-3">
+                <div class="text-base font-semibold text-darkGreen">
+                  Neil Sims
+                </div>
+                <div class="font-normal text-gray-500">
+                  neil.sims@flowbite.com
+                </div>
+              </div>
+            </th>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="static-modal"
+                data-modal-toggle="static-modal"
+                class="flex-row justify-center text-white cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-full px-2.5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+              >
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4.243a1 1 0 1 0-2 0V11H7.757a1 1 0 1 0 0 2H11v3.243a1 1 0 1 0 2 0V13h3.243a1 1 0 1 0 0-2H13V7.757Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          >
+            <th
+              scope="row"
+              class="flex items-center justify-center gap-2 text-left px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              <!-- <img
+                class="w-10 h-10 rounded-full"
+                src="/docs/images/people/profile-picture-1.jpg"
+                alt="Jese image"
+              /> -->
+              <div class="ps-3">
+                <div class="text-base font-semibold">Neil Sims</div>
+                <div class="font-normal text-gray-500">
+                  neil.sims@flowbite.com
+                </div>
+              </div>
+            </th>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="static-modal"
+                data-modal-toggle="static-modal"
+                class="flex-row justify-center text-white cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-full px-2.5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+              >
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4.243a1 1 0 1 0-2 0V11H7.757a1 1 0 1 0 0 2H11v3.243a1 1 0 1 0 2 0V13h3.243a1 1 0 1 0 0-2H13V7.757Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          >
+            <th
+              scope="row"
+              class="flex items-center justify-center gap-2 text-left px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              <!-- <img
+                class="w-10 h-10 rounded-full"
+                src="/docs/images/people/profile-picture-1.jpg"
+                alt="Jese image"
+              /> -->
+              <div class="ps-3">
+                <div class="text-base font-semibold">Neil Sims</div>
+                <div class="font-normal text-gray-500">
+                  neil.sims@flowbite.com
+                </div>
+              </div>
+            </th>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="static-modal"
+                data-modal-toggle="static-modal"
+                class="flex-row justify-center text-white cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-full px-2.5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+              >
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4.243a1 1 0 1 0-2 0V11H7.757a1 1 0 1 0 0 2H11v3.243a1 1 0 1 0 2 0V13h3.243a1 1 0 1 0 0-2H13V7.757Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          >
+            <th
+              scope="row"
+              class="flex items-center justify-center gap-2 text-left px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              <!-- <img
+                class="w-10 h-10 rounded-full"
+                src="/docs/images/people/profile-picture-1.jpg"
+                alt="Jese image"
+              /> -->
+              <div class="ps-3">
+                <div class="text-base font-semibold">Neil Sims</div>
+                <div class="font-normal text-gray-500">
+                  neil.sims@flowbite.com
+                </div>
+              </div>
+            </th>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="static-modal"
+                data-modal-toggle="static-modal"
+                class="flex-row justify-center text-white cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-full px-2.5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+              >
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4.243a1 1 0 1 0-2 0V11H7.757a1 1 0 1 0 0 2H11v3.243a1 1 0 1 0 2 0V13h3.243a1 1 0 1 0 0-2H13V7.757Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+          >
+            <th
+              scope="row"
+              class="flex items-center justify-center gap-2 text-left px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              <!-- <img
+                class="w-10 h-10 rounded-full"
+                src="/docs/images/people/profile-picture-1.jpg"
+                alt="Jese image"
+              /> -->
+              <div class="ps-3">
+                <div class="text-base font-semibold">Neil Sims</div>
+                <div class="font-normal text-gray-500">
+                  neil.sims@flowbite.com
+                </div>
+              </div>
+            </th>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4"> text example </td>
+            <td class="px-6 py-4">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="static-modal"
+                data-modal-toggle="static-modal"
+                class="flex-row justify-center text-white cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-full px-2.5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+              >
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4.243a1 1 0 1 0-2 0V11H7.757a1 1 0 1 0 0 2H11v3.243a1 1 0 1 0 2 0V13h3.243a1 1 0 1 0 0-2H13V7.757Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Main modal -->
+<div
+  id="static-modal"
+  data-modal-backdrop="static"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div
+        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Static modal
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="static-modal"
+        >
+          <svg
+            class="w-3 h-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-5 space-y-4">
+        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          With less than a month to go before the European Union enacts new
+          consumer privacy laws for its citizens, companies around the world are
+          updating their terms of service agreements to comply.
+        </p>
+        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          The European Union’s General Data Protection Regulation (G.D.P.R.)
+          goes into effect on May 25 and is meant to ensure a common set of data
+          rights in the European Union. It requires organizations to notify
+          users as soon as possible of high-risk data breaches that could
+          personally affect them.
+        </p>
+      </div>
+      <!-- Modal footer -->
+      <div
+        class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+      >
+        <button
+          data-modal-hide="static-modal"
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >I accept</button
+        >
+        <button
+          data-modal-hide="static-modal"
+          type="button"
+          class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >Decline</button
+        >
+      </div>
+    </div>
+  </div>
 </div>

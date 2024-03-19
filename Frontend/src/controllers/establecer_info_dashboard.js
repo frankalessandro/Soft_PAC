@@ -1,38 +1,35 @@
 let usuario = JSON.parse(localStorage.getItem("user"));
-console.log(usuario);
-const rol = usuario.idRol
+const rol = usuario.idRol;
 
 const name = (document.querySelector("#name-user-box").textContent =
-  usuario.nombre + ' - ' + rol);
+  usuario.nombre + " - " + rol);
 
 const email = (document.querySelector("#email-user-box").textContent =
   usuario.correo);
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const opciones = document.querySelectorAll('.opciones');
+document.addEventListener("DOMContentLoaded", () => {
+  const opciones = document.querySelectorAll(".opciones");
 
-    opciones.forEach(opcion => {
-        opcion.addEventListener('click', () => {
-            const dataVista = opcion.getAttribute('data-vista');
-            console.log(dataVista);
+  opciones.forEach((opcion) => {
+    opcion.addEventListener("click", () => {
+      const dataVista = opcion.getAttribute("data-vista");
 
-            // Ocultar todas las vistas
-            const vistas = document.querySelectorAll('.vistas');
-            vistas.forEach(vista => {
-                vista.style.display = 'none';
-            });
+      // Ocultar todas las vistas
+      const vistas = document.querySelectorAll(".vistas");
+      vistas.forEach((vista) => {
+        vista.style.display = "none";
+      });
 
-            // Mostrar solo la vista correspondiente al data-vista de la opción seleccionada
-            const vistaMostrar = document.querySelector(`.${dataVista}`);
-            if (vistaMostrar) {
-                vistaMostrar.style.display = 'block';
-            }
-        });
+      // Mostrar solo la vista correspondiente al data-vista de la opción seleccionada
+      const vistaMostrar = document.querySelector(`.${dataVista}`);
+      if (vistaMostrar) {
+        vistaMostrar.style.display = "block";
+      }
     });
+  });
 });
 
-
-const idRol = document.querySelector('.idRol')
+const idRol = document.querySelector(".idRol");
 if (usuario.idRol == 1 || usuario.idRol == 2) {
   idRol.innerHTML = `
       <li class="opciones" data-vista="dashboard">
@@ -41,7 +38,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
               <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
               <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
           </svg>
-          <span class="ms-3"></span>
+          <span class="ms-3">Dashboard</span>
         </a>
       </li>
    <li class="opciones" data-vista="proyectos">
@@ -69,7 +66,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
          <span class="flex-1 ms-3 whitespace-nowrap">Clientes</span>
          <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
       </a>
-   </li>`
+   </li>`;
 } else {
   idRol.innerHTML = `
            <li  class="opciones" data-vista="crear_proyecto">
@@ -86,9 +83,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
                   <path fill-rule="evenodd" d="M4 4a2 2 0 1 0 0 4h16a2 2 0 1 0 0-4H4Zm0 6h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8Zm10.707 5.707a1 1 0 0 0-1.414-1.414l-.293.293V12a1 1 0 1 0-2 0v2.586l-.293-.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l2-2Z" clip-rule="evenodd"/>
                 </svg>                
                  <span class="flex-1 ms-3 whitespace-nowrap">Mis proyectos</span>
-                 <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
+                 <span id="count-my-proyects-dashboard" class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
               </a>
-           </li>`
+           </li>`;
 }
-
-
