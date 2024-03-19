@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   )
     .then((respuestaProyectos) => respuestaProyectos.json())
     .then((misproyectos) => {
-      console.log(misproyectos.rpta[0])
+      // console.log(misproyectos.rpta[0])
       document.querySelector('#count-my-proyects-dashboard').textContent = misproyectos.rpta.length;
 
       // Obtener la referencia del cuerpo de la tabla
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const getColorStatus = (status) => {
-      const coloresEstado = ['bg-green-500', 'bg-gray-500', 'bg-yellow-500']
+      const coloresEstado = ['bg-green-500', 'bg-gray-500', 'bg-yellow-500','bg-red-500']
       let colorChoose
       switch (status) {
         case '3'://enviado
@@ -128,8 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
         case '6'://aceptado
           colorChoose = coloresEstado[0]
           break;
+          case '2':
+            colorChoose = coloresEstado[3]
+            break;
       }
-      console.log(colorChoose)
+      // console.log(colorChoose)
       return colorChoose
     }
 

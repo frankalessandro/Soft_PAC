@@ -3,17 +3,52 @@ import { Image } from "astro:assets";
 import imagenStiven from "../assets/StivenPic1.jpeg";
 import imagenAlejo from "../assets/alejo_p.jpeg";
 import imagenFrank from "../assets/FrankPic2.jpeg";
+import Topbar from '../components/Landing/Topbar.astro'
 ---
 
 <div class="bg-white">
+    <Topbar/>
     <div
         class="flex flex-col items-center justify-center min-h-screen bg-gray-100"
     >
         <div class="w-full bg-white p-6 rounded-lg shadow-lg">
            
-
+            
             <div class="container mx-auto py-8">
                 <div class="flex flex-wrap justify-center gap-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">
+                            Política de Protección de Datos y Derechos de Autor
+                        </h2>
+                        <p class="text-gray-700 mb-6">
+                            En nuestra plataforma de publicación de proyectos para estudiantes del SENA, nos comprometemos a proteger los derechos de autor y a garantizar el tratamiento adecuado de los datos de nuestros usuarios. A continuación, presentamos nuestra política detallada al respecto:
+                        </p>
+                        <h3 class="text-lg font-semibold mb-2">
+                            Derechos de Autor
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            En nuestra plataforma, respetamos plenamente los derechos de autor y nos comprometemos a cumplir con todas las leyes y regulaciones relacionadas con la propiedad intelectual. Todos los proyectos publicados están debidamente autorizados por los clientes o son de dominio público.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Si encuentra algún proyecto que infrinja sus derechos de autor, no dude en contactarnos y tomaremos las medidas necesarias para remediar la situación de inmediato.
+                        </p>
+                        <h3 class="text-lg font-semibold mb-2">
+                            Tratamiento de Datos
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            Valoramos la privacidad y la protección de los datos personales de nuestros usuarios. Por lo tanto, nos comprometemos a garantizar la confidencialidad y seguridad de la información proporcionada.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Los datos recopilados se utilizan únicamente con el propósito de facilitar el proceso de asignación de proyectos a los estudiantes y mejorar la experiencia del usuario. No compartiremos ni venderemos sus datos a terceros sin su consentimiento explícito.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Además, implementamos medidas técnicas y organizativas para proteger los datos contra el acceso no autorizado, la divulgación, la alteración o la destrucción. Nuestro objetivo es garantizar la integridad y la confidencialidad de la información en todo momento.
+                        </p>
+                        <p class="text-gray-700">
+                            Si tiene alguna pregunta o inquietud sobre nuestras políticas de derechos de autor o tratamiento de datos, no dude en ponerse en contacto con nuestro equipo de soporte. Estamos aquí para ayudar y garantizar una experiencia segura y confiable para todos nuestros usuarios.
+                        </p>
+                    </div>
+                    
                     <!-- Tarjeta 1 -->
                     <div
                         class="relative w-full max-w-72 flex flex-col justify-center items-center bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 mt-4 transition duration-300 transform hover:scale-105"
@@ -37,13 +72,13 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                 >stivenchoo@gmail.com</span
                             >
                             <span
-                                class="text-sm font-semibold text-green dark:text-gray-400"
+                                class="text-sm font-semibold text-color-base dark:text-gray-400"
                                 >Software Dev</span
                             >
                             <div class="flex gap-5">
                                 <a
                                     href="https://www.linkedin.com/in/stiven-colorado-370028220/"
-                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-green rounded-md hover:bg-green focus:ring-4 focus:outline-none focus:ring-green dark:bg-green dark:hover:bg-green dark:focus:ring-green"
+                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-color-base rounded-md hover:bg-color-base focus:ring-4 focus:outline-none focus:ring-green dark:bg-color-base dark:hover:bg-color-base dark:focus:ring-green"
                                 >
                                     <svg
                                         class="w-10 h-10 text-white dark:text-white"
@@ -63,7 +98,7 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                 </a>
                                 <a
                                     href="https://github.com/StivenColorado"
-                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-green rounded-md hover:bg-green focus:ring-4 focus:outline-none focus:ring-green dark:bg-green dark:hover:bg-green dark:focus:ring-green"
+                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-color-base rounded-md hover:bg-color-base focus:ring-4 focus:outline-none focus:ring-green dark:bg-color-base dark:hover:bg-color-base dark:focus:ring-green"
                                 >
                                     <svg
                                         class="w-10 h-10 dark:text-white"
@@ -104,13 +139,13 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                 >alejandrocaicedop05@gmail.com</span
                             >
                             <span
-                                class="text-sm font-semibold text-green dark:text-gray-400"
+                                class="text-sm font-semibold text-color-base dark:text-gray-400"
                                 >Mobile Dev</span
                             >
                             <div class="flex gap-5">
                                 <a
                                     href="https://www.linkedin.com/in/alejandrocaicedop/"
-                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-green rounded-md hover:bg-green focus:ring-4 focus:outline-none focus:ring-green dark:bg-green dark:hover:bg-green dark:focus:ring-green"
+                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-color-base rounded-md hover:bg-color-base focus:ring-4 focus:outline-none focus:ring-green dark:bg-color-base dark:hover:bg-color-base dark:focus:ring-green"
                                 >
                                     <svg
                                         class="w-10 h-10 text-white dark:text-white"
@@ -154,13 +189,13 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                 >frank.alessandro.roldan@gmail.com</span
                             >
                             <span
-                                class="text-sm font-semibold text-green dark:text-gray-400"
+                                class="text-sm font-semibold text-color-base dark:text-gray-400"
                                 >Software Dev</span
                             >
                             <div class="flex gap-5">
                                 <a
                                     href="https://www.linkedin.com/in/frank-alessandro-roldan/"
-                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-green rounded-md hover:bg-green focus:ring-4 focus:outline-none focus:ring-green dark:bg-green dark:hover:bg-green dark:focus:ring-green"
+                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-color-base rounded-md hover:bg-color-base focus:ring-4 focus:outline-none focus:ring-green dark:bg-color-base dark:hover:bg-color-base dark:focus:ring-green"
                                 >
                                     <svg
                                         class="w-10 h-10 text-white dark:text-white"
@@ -180,7 +215,7 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                 </a>
                                 <a
                                     href="https://github.com/frankalessandro"
-                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-green rounded-md hover:bg-green focus:ring-4 focus:outline-none focus:ring-green dark:bg-green dark:hover:bg-green dark:focus:ring-green"
+                                    class="inline-flex items-center p-1 text-sm font-medium text-center text-white bg-color-base rounded-md hover:bg-color-base focus:ring-4 focus:outline-none focus:ring-green dark:bg-color-base dark:hover:bg-color-base dark:focus:ring-green"
                                 >
                                     <svg
                                         class="w-10 h-10 dark:text-white"
@@ -227,7 +262,7 @@ import imagenFrank from "../assets/FrankPic2.jpeg";
                                     class="flex-initial shrink w-full xl:w-7/12 lg:w-6/12 mb-6 md:mb-0 lg:-ml-12"
                                 >
                                     <div
-                                        class="bg-green h-full rounded-lg p-6 lg:pl-12 text-white flex items-center py-12 lg:py-0"
+                                        class="bg-color-base h-full rounded-lg p-6 lg:pl-12 text-white flex items-center py-12 lg:py-0"
                                         style="z-index: -10"
                                     >
                                         <div class="lg:pl-12">
