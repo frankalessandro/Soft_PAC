@@ -1,23 +1,42 @@
 ---
-import Landing from "../layouts/Landing.astro"
+import Landing from "../layouts/Landing.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
-		<link rel="stylesheet" href="../css/Landing.css">
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script>
+		<link rel="stylesheet" href="../css/Landing.css" />
 		<title>Soft PAC</title>
-</head>
-<>
-	<div class="bg-content w-full bg-cover h-screen bg-no-repeat" >
-		<Landing/>
-
-	</div>
-</body>
+	</head>
+	<body>
+		<div class="bg-content w-full bg-cover h-screen bg-no-repeat">
+			<Landing />
+			<div class="h-5/6 flex justify-center items-center">
+				<div class="w-160 h-36 flex flex-col justify-center items-center gap-8">
+					<p>
+						<span class="text-5xl text-white font-semibold"> Proyectos</span>
+						<span class="text-5xl text-color-base font-semibold">ADSO</span>
+						<span class="text-5xl text-orange-400 font-semibold"> CBI</span>
+					</p>
+					
+					<p class="text-xl font-normal text-center text-white">
+						¿Tienes una idea que quema en tu mente? ¡Es hora de compartirla! Únete a nuestro banco de proyectos y convierte tu visión en realidad. ¿Estás listo para dar el primer paso hacia el éxito?
+					</p>
+					
+					<a href="/login" class="flex-row justify-center w-full lg:w-64 lg:h-12 text-white text-xl cursor-pointer bg-color-base hover:bg-color-base-hover focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100" type="button">
+						Registra tu proyecto
+					  </a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

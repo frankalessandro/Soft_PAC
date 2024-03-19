@@ -18,7 +18,9 @@ module.exports = {
 			  },
 			  backgroundImage:{
 				'content': 'url("./src/assets/banner_bg.jpg")',
-			  }
+				'icon':'url("./src/assets/idea.png")',
+			  },
+
 
 		},
 		
