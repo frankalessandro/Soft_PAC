@@ -13,11 +13,14 @@ module.exports = {
 				'darkGreen': '#008080',
 				'moreDarkGreen': '#062F2F'
 			  },
-			  spacing: {
-				'160': '80vh',
+			  spacing:{
+				'160':'80vh'
+			  },
+			  backgroundImage:{
+				'content': 'url("./src/assets/fondo6.jpg")',
+				'icon':'url("./src/assets/idea.png")',
 			  },
 		},
-		
 	},
 	plugins: [
 		require('flowbite/plugin')
