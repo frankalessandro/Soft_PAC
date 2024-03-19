@@ -44,6 +44,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
           <path fill-rule="evenodd" d="M12 3a1 1 0 0 1 .78.375l4 5a1 1 0 1 1-1.56 1.25L13 6.85V14a1 1 0 1 1-2 0V6.85L8.78 9.626a1 1 0 1 1-1.56-1.25l4-5A1 1 0 0 1 12 3ZM9 14v-1H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-4v1a3 3 0 1 1-6 0Zm8 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule="evenodd"/>
         </svg>                
          <span class="flex-1 ms-3 whitespace-nowrap">Proyectos</span>
+         <span id="count-all-projects" class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
       </a>
    </li>
    <li class="opciones" data-vista="usuarios">   
