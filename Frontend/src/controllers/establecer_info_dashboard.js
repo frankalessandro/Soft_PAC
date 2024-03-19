@@ -1,8 +1,14 @@
 let usuario = JSON.parse(localStorage.getItem("user"));
 const rol = usuario.idRol;
 
+let rol_ =usuario.idRol == "1"
+? "Super-Admin"
+: usuario.idRol == "2"
+? "Admin-area"
+: "Cliente";
+
 const name = (document.querySelector("#name-user-box").textContent =
-  usuario.nombre + " - " + rol);
+  usuario.nombre + " - " + rol_);
 
 const email = (document.querySelector("#email-user-box").textContent =
   usuario.correo);
