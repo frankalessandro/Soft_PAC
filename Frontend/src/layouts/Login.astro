@@ -3,13 +3,15 @@ import { Image } from "astro:assets";
 import makeidea from "../assets/Proyect.svg";
 ---
 
-<div
-    class="w-screen h-screen flex justify-center items-center bg-gray-100"
->
+<div class="w-screen h-screen flex justify-center items-center bg-gray-100">
     <div class="w-11/12 h-4/6 flex shadow-2xl rounded-md md:w-3/6">
         <aside class="w-7/12 h-full hidden lg:flex">
-          
-            <Image class="object-fill rounded-l-2xl w-full  bg-lightGreen" src={makeidea} alt="" loading="eager"/>
+            <Image
+                class="object-fill rounded-l-2xl w-full bg-lightGreen"
+                src={makeidea}
+                alt=""
+                loading="eager"
+            />
         </aside>
         <section
             class="w-full lg:w-5/12 h-full bg-white rounded-r-2xl lg:rounded-r-lg md:rounded-md md:w-full"
@@ -29,40 +31,42 @@ import makeidea from "../assets/Proyect.svg";
                 class="h-4/6 lg:h-3/5 w-full flex flex-col items-center justify-evenly"
             >
                 <span class="text-2xl text-darkGreen">Login</span>
-                
-                <!-- Sexto input (Email) -->
-<div class="relative z-0 w-4/6">
-    <input
-        type="email"
-        id="floating_standard6"
-        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
-        name="usu"
-        required
-        placeholder=" "
-    />
-    <label
-        for="floating_standard6"
-        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-        >Correo</label
-    >
-</div>
 
-<!-- Séptimo input (Password) -->
-<div class="relative z-0 w-4/6">
-    <input
-        type="password"
-        id="floating_standard7"
-        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
-        name="password"
-        required
-        placeholder=" "
-    />
-    <label
-        for="floating_standard7"
-        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-        >Contraseña</label
-    >
-</div>
+                <!-- Sexto input autocomplete="off" (Email) -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        autocomplete="off"
+                        type="email"
+                        id="floating_standard6"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="usu"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard6"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Correo</label
+                    >
+                </div>
+
+                <!-- Séptimo input autocomplete="off" (Password) -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        autocomplete="off"
+                        type="password"
+                        id="floating_standard7"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="password"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard7"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Contraseña</label
+                    >
+                </div>
 
                 <h1 class="w-full text-center max-h-6 h-6" id="box-response">
                 </h1>
