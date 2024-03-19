@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
     .then((respuesta) => respuesta.json())
     .then((respuestaJson) => {
+      document.querySelector('#count-my-proyects1').textContent = respuestaJson.rpta.length;
       if (respuestaJson.rpta) {
         respuestaJson.rpta.forEach((usuario) => {
           fila.innerHTML += `
