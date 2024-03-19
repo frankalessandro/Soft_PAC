@@ -1,8 +1,44 @@
 ---
-import Topbar from "../components/Landing/Topbar.astro"
+import Topbar from "../components/Landing/Topbar.astro";
 ---
 
-<Topbar/>
 
+<div class="fill-slate-950">
+	<div class="bg-content w-full bg-cover h-screen bg-no-repeat">
+		<Topbar />
+		<div
+			class="sm:h-2/5 h-3/5 top-32 sm:top-44 relative p-5 w-full bg-black bg-opacity-45 flex justify-center items-center"
+		>
+			<div
+				class="w-160 h-36 flex flex-col justify-center items-center gap-8"
+			>
+				<p class="text-center">
+					<span class="text-5xl text-white font-semibold">
+						Proyectos</span
+					>
+					<span class="text-5xl text-color-base font-semibold"
+						>ADSO</span
+					>
+					<span class="text-5xl text-orange-400 font-semibold">
+						CBI</span
+					>
+				</p>
 
- 
+				<p class="text-xl font-normal text-center text-white">
+					¿Tienes una idea que quema en tu mente? ¡Es hora de
+					compartirla! Únete a nuestro banco de proyectos y convierte
+					tu visión en realidad. ¿Estás listo para dar el primer paso
+					hacia el éxito?
+				</p>
+
+				<a
+					href="/login"
+					class="flex-row justify-center w-full lg:w-64 lg:h-12 text-white text-xl cursor-pointer bg-color-base hover:bg-color-base-hover focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
+					type="button"
+				>
+					Registra tu proyecto
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
