@@ -13,6 +13,7 @@ module.exports = {
 				'darkGreen': '#008080',
 				'moreDarkGreen': '#062F2F'
 			  },
+
 			  spacing:{
 				'160':'80vh'
 			  },
@@ -20,6 +21,7 @@ module.exports = {
 				'content': 'url("./src/assets/fondo.jpg")',
 				'icon':'url("./src/assets/idea.png")',
 			  },
+
 
 
 		},
