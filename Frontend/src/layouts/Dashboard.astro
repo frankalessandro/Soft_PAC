@@ -1,6 +1,10 @@
 ---
-import Crear_proyectos from "../components/Crear_proyectos.astro" 
-import Proyectos from "../components/Proyectos.astro" 
+import Crear_proyectos from "../components/Views/Crear_proyectos.astro" 
+import  ProyectosCliente from "../components/Views/ProyectosCliente.astro" 
+import  Proyectos from "../components/Views/Proyectos.astro"
+import  Clientes from "../components/Views/Clientes.astro"
+import  Usuarios from "../components/Views/Usuarios.astro"
+
 
 ---
 
@@ -105,7 +109,10 @@ import Proyectos from "../components/Proyectos.astro"
     class="p-4 border-2 border-gray-200 border-solid rounded-lg dark:border-gray-700 mt-14"
   >
     <Crear_proyectos />
-    <Proyectos />
+    <ProyectosCliente />
+    <Clientes/>
+    <Proyectos/>
+    <Usuarios/>
   </div>
 </div>
 

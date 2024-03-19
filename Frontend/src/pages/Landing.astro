@@ -11,9 +11,13 @@ import Landing from "../layouts/Landing.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+		<link rel="stylesheet" href="../css/Landing.css">
 		<title>Soft PAC</title>
 </head>
-<body>
-    <Landing/>
+<>
+	<div class="bg-content w-full bg-cover h-screen bg-no-repeat" >
+		<Landing/>
+
+	</div>
 </body>
 </html>
