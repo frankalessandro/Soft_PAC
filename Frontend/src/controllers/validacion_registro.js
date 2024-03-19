@@ -49,7 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Respuesta del servidor:", data);
             // Maneja la respuesta del servidor según lo necesites
             document.getElementById("box-response").innerText =
-              "Registro exitoso"; // Ejemplo de cómo manejar la respuesta
+                "Registro exitoso"  
+            setTimeout(() => {
+                location.href='/'
+            ; // Ejemplo de cómo manejar la respuesta
+              }, 3000);
           })
           .catch((error) => {
             console.error("Error:", error);
@@ -60,4 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+
+// Obtener referencia al botón "Mostrar etiquetas"
+const btnMostrarEtiquetas = document.getElementById("btnMostrarEtiquetas");
+
+// Agregar evento click al botón "Mostrar etiquetas"
+btnMostrarEtiquetas.addEventListener("click", () => {
+    // Obtener todas las etiquetas del formulario
+    const etiquetas = document.querySelectorAll("label");
+
+    // Iterar sobre cada etiqueta y mostrarla cambiando su clase CSS
+    etiquetas.forEach(etiqueta => {
+        etiqueta.classList.remove("hidden");
+    });
 });

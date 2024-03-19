@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
     .then((respuesta) => respuesta.json())
     .then((respuestaJson) => {
+      document.querySelector('#count-my-proyectsgit ').textContent = respuestaJson.rpta.length;
       if (respuestaJson.rpta) {
         let columnas = Object.keys(respuestaJson.rpta[0]);
 

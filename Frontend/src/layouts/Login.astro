@@ -29,20 +29,41 @@ import makeidea from "../assets/Proyect.svg";
                 class="h-4/6 lg:h-3/5 w-full flex flex-col items-center justify-evenly"
             >
                 <span class="text-2xl text-darkGreen">Login</span>
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="email"
-                    name="usu"
-                    placeholder="Email"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    required
-                />
+                
+                <!-- Sexto input (Email) -->
+<div class="relative z-0 w-4/6">
+    <input
+        type="email"
+        id="floating_standard6"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+        name="usu"
+        required
+        placeholder=" "
+    />
+    <label
+        for="floating_standard6"
+        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+        >Correo</label
+    >
+</div>
+
+<!-- Séptimo input (Password) -->
+<div class="relative z-0 w-4/6">
+    <input
+        type="password"
+        id="floating_standard7"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+        name="password"
+        required
+        placeholder=" "
+    />
+    <label
+        for="floating_standard7"
+        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+        >Contraseña</label
+    >
+</div>
+
                 <h1 class="w-full text-center max-h-6 h-6" id="box-response">
                 </h1>
                 <div class="flex flex-col items-center gap-2 w-3/5 lg:w-30">

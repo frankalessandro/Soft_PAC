@@ -1,12 +1,11 @@
 ---
 import { boolean, number, string } from "astro/zod";
-import LogoPAC from "../assets/LogoPAC.jpg";
-import config from "../config/config.json"
+import LogoPAC from "../assets/Proyect.svg";
+import config from "../config/config.json";
 ---
-<div
-    class="w-screen h-screen flex justify-center items-center bg-moreDarkGreen"
->
-    <div class="w-3/5 h-4/5 flex shadow-2xl rounded-md">
+
+<div class="w-screen h-screen flex justify-center items-center bg-gray-100">
+    <div class="w-11/12 sm:w-3/4 h-4/5 flex shadow-2xl rounded-md">
         <aside class="w-7/12 h-full hidden lg:flex">
             <img
                 class="w-full h-full object-cover rounded-l-2xl"
@@ -26,49 +25,101 @@ import config from "../config/config.json"
                     >
                 </div>
             </header>
-            <form method="dialog" id="form-register"
+            <form
+                method="dialog"
+                id="form-register"
                 class="h-5/6 w-full flex flex-col items-center justify-evenly"
             >
                 <span class="text-2xl text-darkGreen">Registrate</span>
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="text"
-                    name="nombreUsuario"
-                    placeholder="Nombre"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="text"
-                    name="documentoUsuario"
-                    placeholder="Documento"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="text"
-                    name="telefonoUsuario"
-                    placeholder="Teléfono"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="email"
-                    name="correoUsuario"
-                    placeholder="Correo"
-                    required
-                />
-                <input
-                    class="bg-transparent border-r-0 border-t-0 border-l-0 border-b-1 border-darkGreen focus:border-green-400 focus:ring-transparent placeholder:text-darkGreen w-4/5 lg:w-3/4"
-                    type="text"
-                    name="empresaUsuario"
-                    placeholder="Empresa"
-                    required
-                />
-        
-                <h1 class="w-full text-center max-h-6 h-6" id="box-response"></h1>
+                <div class="relative z-0 w-4/6">
+                    <input
+                        type="text"
+                        id="floating_standard"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        type="text"
+                        name="nombreUsuario"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Nombre</label
+                    >
+                </div>
+                <!-- Segundo input -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        type="text"
+                        id="floating_standard2"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="documentoUsuario"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard2"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Documento</label
+                    >
+                </div>
+
+                <!-- Tercer input -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        type="text"
+                        id="floating_standard3"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="telefonoUsuario"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard3"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Teléfono</label
+                    >
+                </div>
+
+                <!-- Cuarto input -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        type="text"
+                        id="floating_standard4"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="correoUsuario"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard4"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Correo</label
+                    >
+                </div>
+
+                <!-- Quinto input -->
+                <div class="relative z-0 w-4/6">
+                    <input
+                        type="text"
+                        id="floating_standard5"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-darkGreen focus:border-green-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                        name="empresaUsuario"
+                        required
+                        placeholder=" "
+                    />
+                    <label
+                        for="floating_standard5"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-green-400 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                        >Empresa</label
+                    >
+                </div>
+
+                <h1 class="w-full text-center max-h-6 h-6" id="box-response">
+                </h1>
                 <div class="flex flex-col items-center gap-2 w-3/5 lg:w-30">
-                    <button type="submit"
+                    <button
+                        type="submit"
                         class="btn-ingresar flex-row justify-center w-full lg:w-40 text-white text-xl cursor-pointer bg-moreDarkGreen hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-[#09E85E]/50 font-medium rounded-2xl px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100"
                         >Registrarse</button
                     >
@@ -80,6 +131,5 @@ import config from "../config/config.json"
 <script
     src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"
     integrity="sha256-r9S9KZvN5nEN1voCkVbj4RdMSLwAa4qeujL5ZOWSN4M="
-    crossorigin="anonymous">
-</script>
+    crossorigin="anonymous"></script>
 <script src="../controllers/validacion_registro.js"></script>
