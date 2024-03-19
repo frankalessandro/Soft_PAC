@@ -1,21 +1,17 @@
-import config from "../../config/config.json"
-const fila = document.querySelector('#row')
+import config from "../../config/config.json";
+const fila = document.querySelector("#row");
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    // hacer peticion al servicio}
-    //sweetmym.com//pacservices/webservice_consultas.php?case=1&idRol=1&idArea=1
-    fetch(`${config.host}/webservice_consultas.php?case=1&idRol=1&idArea=1`, {
-        method: 'GET',
-
-    })
-        .then(respuesta => respuesta.json())
-        .then(respuestaJson => {
-            console.log(respuestaJson);
-            if (respuestaJson.rpta) {
-                respuestaJson.rpta.forEach(usuario => {
-                    console.log(usuario)
-                    fila.innerHTML += `
+document.addEventListener("DOMContentLoaded", () => {
+  // hacer peticion al servicio}
+  //sweetmym.com//pacservices/webservice_consultas.php?case=1&idRol=1&idArea=1
+  fetch(`${config.host}/webservice_consultas.php?case=1&idRol=1&idArea=1`, {
+    method: "GET",
+  })
+    .then((respuesta) => respuesta.json())
+    .then((respuestaJson) => {
+      if (respuestaJson.rpta) {
+        respuestaJson.rpta.forEach((usuario) => {
+          fila.innerHTML += `
                     <tr class="w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="px-6 w-20 py-4">
                         ${usuario.id}
@@ -33,21 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="px-6 w-40 py-4">
                         ${usuario.rol}
                     </td> 
-                    `
-                });
-            }
-        })
-        .catch(error => {
-            console.log(error);
+                    `;
         });
-
-
-
-
-
-
-
-
-
-
-})
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});

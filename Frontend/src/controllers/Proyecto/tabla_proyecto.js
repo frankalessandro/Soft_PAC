@@ -132,6 +132,50 @@ fetch(`${config.host}//webservice_consultas.php?case=2&idRol=1&idArea=1`, {
 
 
 
+// Obtener referencias a los botones
+const btnAceptar = document.getElementById("btnAceptar");
+const btnRechazar = document.getElementById("btnRechazar");
+
+// Agregar evento click al botón "Aceptar"
+btnAceptar.addEventListener("click", () => {
+    enviarSolicitudPost("aceptar");
+});
+
+// Agregar evento click al botón "Rechazar"
+btnRechazar.addEventListener("click", () => {
+    enviarSolicitudPost("rechazar");
+});
+
+// Función para enviar la solicitud POST con confirmación
+function enviarSolicitudPost(decision) {
+    // Preguntar al usuario si está seguro de realizar la acción
+    if (confirm(`¿Estás seguro de ${decision === "aceptar" ? "aceptar" : "rechazar"} la solicitud?`)) {
+        // Realizar la solicitud POST
+        fetch(`${config.host}/webservice_registo.php`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ 
+                case: 5  // Agregar el parámetro adicional "case" con el valor 5
+            })
+        })
+        .then(response => {
+            // Manejar la respuesta de la solicitud POST
+            console.log("Solicitud POST realizada con éxito.");
+            // Aquí puedes realizar cualquier acción adicional después de la solicitud POST
+        })
+        .catch(error => {
+            // Manejar cualquier error que ocurra durante la solicitud POST
+            console.error("Error al realizar la solicitud POST:", error);
+        });
+    } else {
+        // Si el usuario cancela la acción, mostrar un mensaje de cancelación
+        alert("La acción ha sido cancelada.");
+    }
+}
+
+
 
 
 
