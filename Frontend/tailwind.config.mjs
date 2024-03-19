@@ -17,7 +17,7 @@ module.exports = {
 				'160':'80vh'
 			  },
 			  backgroundImage:{
-				'content': 'url("./src/assets/banner_bg.jpg")',
+				'content': 'url("./src/assets/fondo6.jpg")',
 				'icon':'url("./src/assets/idea.png")',
 			  },
 
