@@ -63,8 +63,7 @@ if (usuario.idRol == 1 || usuario.idRol == 2) {
          <span class="flex-1 ms-3 whitespace-nowrap">Clientes</span>
          <span id="count-my-proyects" class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-white bg-color-base rounded-full dark:bg-blue-900 dark:text-blue-300">0</span>
       </a>
-   </li>
-`;
+   </li>`;
 } else {
   idRol.innerHTML = `
            <li  class="opciones" data-vista="crear_proyecto">
