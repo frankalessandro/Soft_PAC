@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((respuestaProyectos) => respuestaProyectos.json())
     .then((misproyectos) => {
       // console.log(misproyectos.rpta[0])
+      console.log(misproyectos)
       document.querySelector('#count-my-proyects-dashboard').textContent = misproyectos.rpta.length;
 
       // Obtener la referencia del cuerpo de la tabla
@@ -95,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('container-status-project').innerHTML = `
             <div class="flex items-end h-full w-full justify-end">
                         <div class="h-2.5 w-2.5 rounded-full ${getColorStatus(proyecto.idEstado)} me-2"></div>
-                        <div class="h-2.5 flex items-center me-2" id="status-my-proyect">Estado</div>
+                        <div class="h-2.5 flex items-center me-2" id="status-my-proyect">${proyecto.estado}</div>
                       </div>
             `
 

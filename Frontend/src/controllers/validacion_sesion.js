@@ -7,5 +7,6 @@ export const validarSesion = (item, ruta) => {
 export const validarSesionLogin = (item, ruta) => {
     if (localStorage.getItem(item)) {
         location.href = ruta
+        localStorage.removeItem(item)
     }
 }
